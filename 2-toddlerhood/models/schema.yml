@@ -8,3 +8,10 @@ models:
         tests:
           - unique
           - not_null
+  - name: claim_diagnosis
+    description: staging
+    columns:
+      - name: claim_id
+        tests:
+          - unique
+          - not_null

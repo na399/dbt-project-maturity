@@ -14,7 +14,7 @@ renamed as (
         -- varchars
         name_f as first_name,
         name_l as last_name,
-        first_name || ' ' ||  last_name as patient_name,
+        -- first_name || ' ' ||  last_name as patient_name,
         bill_to as billing_address,
         zip as zip_code,
         state as state,
@@ -33,9 +33,13 @@ renamed as (
     
     from source 
 
-    where not(is_test)
+    -- where not(is_test)
 
 
 )
 
-select * from renamed
+select 
+    *,
+    first_name || ' ' ||  last_name as patient_name 
+from renamed
+where not(is_test)

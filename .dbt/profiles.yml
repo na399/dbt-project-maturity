@@ -1,0 +1,9 @@
+dbt-learn:
+  target: bigquery
+  outputs:
+    bigquery:
+      type: bigquery
+      method: oauth
+      project: dbt-maturity
+      dataset: dbt_sst
+      threads: 4

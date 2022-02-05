@@ -21,7 +21,6 @@ renamed as (
         ClaimNumber as carrier_claim_number,
 
         -- booleans 
-        total_bill_attempts > 0 as has_ever_been_billed,
         test as is_test,
 
         -- dates
@@ -31,9 +30,10 @@ renamed as (
 
     
     from source
-
-    where not(is_test)
-
 )
 
-select * from renamed
+select 
+    *,
+    total_bill_attempts > 0 as has_ever_been_billed,
+from renamed
+where not(is_test)

@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: ehr_data
-    database: raw
+    database: dbt-maturity
     schema: ehr_data
     tables:        
       - name: doc_specialties

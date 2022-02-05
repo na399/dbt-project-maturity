@@ -2,14 +2,16 @@ version: 2
 
 sources:
   - name: billing_data
-    database: raw
+    project: dbt-maturity
+    dataset: billing_data
     tables: 
       - name: claims
       - name: claim_line
       - name: claim_diagnosis
 
   - name: ehr_data
-    database: raw
+    project: dbt-maturity
+    dataset: ehr_data
     tables:        
       - name: doc_specialties
       - name: patients

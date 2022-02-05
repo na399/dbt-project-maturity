@@ -1,9 +1,9 @@
-{{
+{# Commented out for now as BigQuery doesn't support incremental with the existing code { 
   config(
     materialized = 'incremental',
     unique_key = 'claim_id',
     )
-}}
+}#}
 
 with 
 

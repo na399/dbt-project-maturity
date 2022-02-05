@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: billing_data
+    database: dbt-maturity
     schema: billing_data
-    database: raw
     tables: 
       - name: claims
       - name: claim_line

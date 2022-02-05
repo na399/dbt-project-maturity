@@ -15,7 +15,7 @@ renamed as (
 
         -- varchsrs
         icd10 as icd_10_code,
-        split_part(icd10, '.', 1) as parent_icd10,
+        split(icd10, '.')[offset(0)] as parent_icd10,
         icd10desc as icd_10_code_descrip,
 
         -- dates
